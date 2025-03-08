@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Speech Transcription</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>Almost realtime stt with whisper and websocket</h1>
+        <div class="subtitle">Real-time Speech Transcription</div>
+    </div>
+
+    <div id="controls">
+        <button id="startBtn" onclick="startRecording()" disabled>
+            <i class="fa-solid fa-microphone"></i> Start Recording
+        </button>
+        <button id="stopBtn" onclick="stopRecording()" disabled>
+            <i class="fa-solid fa-stop"></i> Stop Recording
+        </button>
+    </div>
+
+    <div id="transcriptionBox"></div>
+
+    <div class="status-container">
+        <div class="status">
+            WebSocket Status:
+            <span id="wsStatus" class="disconnected">Disconnected</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

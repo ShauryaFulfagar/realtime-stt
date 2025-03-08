@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e6e7ee;
+    color: #44476a;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #31344b;
+}
+
+#controls {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    background-color: #e6e7ee;
+    color: #44476a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 10px #c8c9d1, -5px -5px 10px #ffffff;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:active:not(:disabled),
+button.active {
+    box-shadow: inset 3px 3px 6px #c8c9d1, inset -3px -3px 6px #ffffff;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#transcriptionBox {
+    width: 100%;
+    min-height: 250px;
+    max-height: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+    overflow-y: auto;
+    background-color: #e6e7ee;
+    box-shadow: inset 3px 3px 6px #c8c9d1, inset -3px -3px 6px #ffffff;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.status-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.status {
+    font-size: 0.9rem;
+    color: #44476a;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px #c8c9d1, -3px -3px 6px #ffffff;
+    display: inline-block;
+    font-weight: 400;
+}
+
+#wsStatus {
+    font-weight: 500;
+}
+
+.connected {
+    color: #3a9679;
+}
+
+.disconnected {
+    color: #e53935;
+}
+
+.header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d1d9e6;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #7b7f9e;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.recording-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #e53935;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
